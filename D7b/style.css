@@ -150,7 +150,7 @@ main .main-wrapper .main-heading {
   margin: -2px;
 }
 
-/* ? ADDED 14.03 - for responsive I want to hide part of categories with the possibility to scroll itself in x-assis (no problem in full-screen desktop)  */
+/* ? ADDED 14.03 - for responsive I want to hide part of categories with the possibility to scroll itself in x-assis (no problem in after min-width 1050px)  */
 .main-heading .categories {
   display: flex;
   flex-wrap: nowrap;
