@@ -88,7 +88,7 @@ main .main-wrapper .main-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 0px;
   margin-bottom: 1rem;
   /* border: 1px solid red; */
 }
@@ -100,7 +100,7 @@ main .main-wrapper .main-heading {
   z-index: 0;
   border: 2px solid #cccccc;
   bottom: -200px;
-  left: 0;
+  left: -300px;
   border-radius: 6px;
   background: #ffffff;
   transition-delay: 0.3s;
@@ -127,6 +127,7 @@ main .main-wrapper .main-heading {
 }
 .main-heading .left-btn:hover .left-btn-hover {
   opacity: 1;
+  left: 0;
   z-index: 1;
 }
 .main-heading .left-btn a {
@@ -150,10 +151,10 @@ main .main-wrapper .main-heading {
   margin: -2px;
 }
 
-/* ? ADDED 14.03 - for responsive I want to hide part of categories with the possibility to scroll itself in x-assis (no problem in after min-width 1050px)  */
+/* ? ADDED 14.03 - for responsive I want to hide part of categories with the possibility to scroll itself in x-assis (no problem in after min-width 1050px)   */
 .main-heading .categories {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow: hidden;
 }
 /* ? END OF THE ADD 14.03*/
@@ -182,9 +183,9 @@ main .main-wrapper .main-heading {
 
 .thumbs-wrapper {
   width: 100%;
-  padding: 1rem 1rem;
+  padding: 1rem 0px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
@@ -192,7 +193,7 @@ main .main-wrapper .main-heading {
 
 .thumb {
   max-width: 22%;
-  min-width: 280px;
+  min-width: 250px;
   /* border: 1px solid red; */
   display: flex;
   justify-content: center;
@@ -392,21 +393,31 @@ main .main-wrapper .main-heading {
 }
 
 /* ! RESPONSIVE FINO A MIN WIDTH 1050PX */
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1400px) {
+  .thumbs-wrapper {
+    width: 100%;
+    padding: 1rem 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
   .main-heading .categories a {
     margin-right: 0.1rem;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 
   .thumb {
-    width: 20%;
-    min-width: 200px;
+    /* width: 20%; */
+    min-width: 300px;
     /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: space-between;
-    gap: 0.5rem;
+    gap: 0.1rem;
     transition: all 0.3s;
   }
 
@@ -419,6 +430,50 @@ main .main-wrapper .main-heading {
 
   .user-info a .badge {
     font-size: 0.4rem;
+  }
+
+  .shot-stats {
+    gap: 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .thumbs-wrapper {
+    width: 100%;
+    padding: 1rem 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .main-heading .categories a {
+    margin-right: 0.1rem;
+    font-size: 0.7rem;
+  }
+
+  .thumb {
+    /* width: 20%; */
+    min-width: 200px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 0.1rem;
+    transition: all 0.3s;
+  }
+
+  .user-info a .userId,
+  .shot-stats .like-stats a span,
+  .shot-stats .views-stats span,
+  .boosted {
+    font-size: 0.6rem;
+  }
+
+  .user-info a .badge {
+    font-size: 0.5rem;
   }
 
   .shot-stats {
